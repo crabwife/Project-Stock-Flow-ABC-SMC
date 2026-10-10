@@ -1,0 +1,53 @@
+{
+  "seed": 63,
+  "eps": 0.49,
+  "n_years": 12,
+  "max_projects": 256,
+  "run_profile": "smoke",
+  "raw_trajectory_file": "scientist_trajectories.csv",
+  "models": [
+    "competing_risks",
+    "effort_threshold",
+    "age_hazards",
+    "project_frailty",
+    "dynamic_context"
+  ],
+  "profiles": {
+    "smoke": {
+      "n_scholars": 1000,
+      "prior_draws": 50,
+      "abc_particles": 100,
+      "abc_generations": 6,
+      "abc_candidates_per_generation": 2000,
+      "posterior_draws": 150,
+      "sensitivity_draws": 50,
+      "particle_count": 312,
+      "particle_filter_scholars": 56
+    },
+    "analysis": {
+      "n_scholars": 4096,
+      "prior_draws": 500,
+      "abc_particles": 250,
+      "abc_generations": 6,
+      "abc_candidates_per_generation": 5000,
+      "posterior_draws": 1000,
+      "sensitivity_draws": 250,
+      "particle_count": 2048,
+      "particle_filter_scholars": 512
+    }
+  },
+  "abc_epsilon_quantile": 0.6,
+  "abc_kernel_scale": 1.0,
+  "particle_filter_epsilon": 1.0,
+  "particle_filter_ess_fraction": 0.5,
+  "target_block_weights": {
+    "annual_distribution": 1.0,
+    "age_profile": 1.0,
+    "transitions": 1.0,
+    "increments": 1.0,
+    "spell_hazards": 1.0,
+    "dropout_gradient": 1.0,
+    "career_distribution": 1.0,
+    "dependence": 1.0
+  }
+}

@@ -1,0 +1,41 @@
+# csvs everywhere, including compressed copies
+*.csv*
+
+# retain csvs in these task outputs
+!/h_abc_smc/output/**/*.csv*
+!/i_particle_filter/output/**/*.csv*
+!/j_posterior_productivity/output/**/*.csv*
+!/k_sensitivity/output/**/*.csv*
+
+# virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# local environment variables
+.env
+.env.*
+!.env.example
+
+# python and notebook caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+
+# editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
